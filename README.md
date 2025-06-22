@@ -14,29 +14,29 @@ The project uses Linux system calls such as opendir, readdir, stat, and structur
 - 📂 Uses system calls: stat(), ctime(), opendir(), readdir(), strchr(), etc.
 
 ## 📂 FILE STRUCTURE:
-- myls.c → Complete implementation of ls -lias logic
+- `myls.c` → Complete implementation of ls -lias logic
 - (Optional) makefile → Automates compilation (if needed)
 ## ⚙️ HOW TO COMPILE AND RUN:
 ### ✅ METHOD 1: Manual Compilation (Recommended):
 gcc -o myls myls.c
-- ./myls                 # List current directory files
-- ./myls -a              # Show all including hidden files
-- ./myls -l              # Long listing format
-- ./myls -li             # Long + inode numbers
-- ./myls -lias           # Long + inode + all + block size
-- ./myls /etc -lis       # Apply flags to a specific directory
+- `./myls`                 # List current directory files
+- `./myls -a`              # Show all including hidden files
+- `./myls -l`             # Long listing format
+- `./myls -li`             # Long + inode numbers
+- `./myls -lias`           # Long + inode + all + block size
+- `./myls /etc -lis`      # Apply flags to a specific directory
 ### ✅ METHOD 2: Using Makefile (Optional):
-- myls: myls.c
+- `myls`: myls.c
 	- cc -o myls myls.c
-- To compile: make
-- To run: ./myls
+- To compile: `make`
+- To run: `./myls`
 ## 🖥️ COMMAND OPTIONS:
 - -l	Long format listing
 - -i	Show inode numbers
 - -a	Show hidden files
 - -s	Show size in blocks
 ## 📌 SAMPLE OUTPUT:
-- ./myls -lias
+- `./myls` -lias
 - in function . lias
 - 56789 d rwxr-xr-x  2 1000 1000 4096 Jun 21  Documents
 - 12345 - rw-r--r--  1 1000 1000  123 Jun 19  README.txt
